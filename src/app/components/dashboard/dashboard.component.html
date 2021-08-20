@@ -1,0 +1,24 @@
+<div class="container">
+    <mat-card class="card-select-country">
+        <mat-card-header class="head-card">
+            <mat-card-title  class="title">Seleccione un pais</mat-card-title>
+        </mat-card-header>
+
+        <mat-card-content class="content-card">
+            <form [formGroup]="countryForm">
+                <mat-radio-group aria-label="Select an option" formControlName="country">
+                    <mat-radio-button *ngFor="let option of countries" [value]="option.value">
+                        {{option.viewValue}}
+                        <div class="container-img">
+                            <img class="flag" [src]="option.img" alt="Bandera de un pais">
+                        </div>
+                    </mat-radio-button>
+                </mat-radio-group>
+                <button mat-button (click)="getWeather()">Buscar</button>
+            </form>
+        </mat-card-content>
+    </mat-card>
+</div>
+
+
+

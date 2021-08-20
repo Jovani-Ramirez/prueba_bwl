@@ -1,0 +1,99 @@
+$colorAzul: #673ab7;
+
+.background-container {
+  width: 100%;
+  height: 100%;
+  background-image: url(../../../assets/backgrounds/color.jpeg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+.container {
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+}
+
+.container-back-btn {
+  width: 100%;
+  margin-bottom: 70px;
+}
+
+.btn-back {
+  margin-top: 10px;
+  width: 12%;
+  text-align: center;
+  font-size: 16px;
+  color: #fff;
+}
+
+.container-form-new {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: center;
+  text-align: center;
+}
+
+.form-new-user {
+  width: 40%;
+}
+
+.card-form {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.header-card {
+  width: 100%;
+  text-align: center;
+}
+
+.title {
+  font-size: 22px;
+  color: $colorAzul;
+}
+
+.content-card {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.w-100 {
+  width: 100%;
+}
+
+.w-90 {
+  width: 60%;
+}
+
+.err {
+  color: red;
+}
+
+.container-btns{
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.btn-expand {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: center;
+  margin: 10px auto;
+}
+
+.btn-acept {
+  width: 90%;
+}

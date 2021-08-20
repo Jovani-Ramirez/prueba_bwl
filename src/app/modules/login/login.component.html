@@ -1,0 +1,41 @@
+<div class="background-container">
+  <div class="container">
+    <div class="container-form-login">
+      <div class="login-form">
+        <mat-card>
+          <mat-card-header class="header-card">
+            <mat-card-title class="title">Bienvenido</mat-card-title>
+          </mat-card-header>
+          <mat-card-content class="card-form">
+            <form [formGroup]="formGroup">
+              <mat-form-field class="w-100" appearance="outline">
+                <mat-label class="title-controller">Email</mat-label>
+                <input class="inp-controller" type="email" matInput formControlName="email">
+                <mat-error *ngIf="formGroup.controls.email.hasError('required')">
+                  El email es <strong>requerido</strong>
+                  <ul>
+                    <li>Debe tener un formato Ex. correo@correo.com</li>
+                  </ul>
+                </mat-error>
+              </mat-form-field>
+              <mat-form-field class="w-100" appearance="outline">
+                <mat-label class="title-controller">Contraseña</mat-label>
+                <input class="inp-controller" type="password" matInput formControlName="password">
+                <mat-error *ngIf="formGroup.controls.password.hasError('required')">
+                  El contraseña es <strong>requerida</strong>
+                </mat-error>
+              </mat-form-field>
+            </form>
+          </mat-card-content>
+          <mat-card-actions class="btn-expand">
+            <button mat-raised-button class="btn-acept" (click)="login()" [disabled]="!formGroup.valid" color="primary">Login</button>
+          </mat-card-actions>
+          <div class="container-new-user">
+            <p class="new-user-t">¿No tienes Cuenta?</p>
+            <button class="new-user-l" mat-button (click)="newUser()">Registrate</button>
+          </div>
+        </mat-card>
+      </div>
+    </div>
+  </div>
+</div>

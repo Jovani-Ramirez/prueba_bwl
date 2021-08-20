@@ -1,0 +1,60 @@
+<div class="background-container">
+  <div class="container">
+    <div class="container-back-btn">
+      <button mat-button class="btn-back" (click)="login()">
+        <mat-icon aria-hidden="false" aria-label="Example home icon">arrow_back</mat-icon>Regresar
+      </button>
+    </div>
+    <div class="container-form-new">
+      <div class="form-new-user">
+        <mat-card class="card-form">
+          <mat-card-header class="header-card">
+            <mat-card-title class="title">Crear cuenta</mat-card-title>
+          </mat-card-header>
+          <mat-card-content class="content-card">
+            <form [formGroup]="newUser">
+              <mat-form-field appearance="outline" class="w-100">
+                <mat-label>Email</mat-label>
+                <input class="w-100" matInput type="email" formControlName="email" placeholder="Corrreo">
+                <mat-error *ngIf="newUser.controls.email.hasError('required')">
+                  El email es <strong>requerido</strong>
+                </mat-error>
+              </mat-form-field>
+              <mat-form-field appearance="outline" class="w-90">
+                <mat-label>Contraseña</mat-label>
+                <input class="w-90" matInput type="password" formControlName="password" placeholder="Contraseña">
+              </mat-form-field>
+              <small *ngIf="passwordNoValido" class="err">
+                <ul>
+                  <li>Verifique la contraseña</li>
+                  <li>Debe de incluir al menos una mayúscula</li>
+                  <li>Debe de incluir al menos un número</li>
+                  <li>Debe de incluir al menos un carácter especial</li>
+                  <li>Una longitud mínima de 8 caracteres</li>
+                </ul>
+              </small>
+              <mat-form-field appearance="outline" class="w-90">
+                <mat-label>Verificar la contraseña</mat-label>
+                <input class="w-90" matInput type="password" formControlName="password2"
+                  placeholder="Confirmar contraseña">
+              </mat-form-field>
+              <small *ngIf="password2NoValido" class="err">
+                Verfique la contraseña
+              </small>
+              <mat-form-field appearance="outline" class="w-100">
+                <mat-label>Nombre</mat-label>
+                <input class="w-100" matInput type="text" formControlName="name" placeholder="Nombre">
+                <mat-error *ngIf="newUser.controls.name.hasError('required')">
+                  El nombre es <strong>requerido</strong>
+                </mat-error>
+              </mat-form-field>
+            </form>
+          </mat-card-content>
+          <mat-card-actions class="btn-expand">
+            <button mat-raised-button class="btn-acept" (click)="addUser()" [disabled]="!newUser.valid" color="primary">Login</button>
+          </mat-card-actions>
+        </mat-card>
+      </div>
+    </div>
+  </div>
+</div>

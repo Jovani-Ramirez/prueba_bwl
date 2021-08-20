@@ -4,6 +4,9 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 
 ## Development server
 
+Se necesita instalar las dependencias de node lo unico que se necesita hacer es dar el comando : npm install y posteriormente ya se puede ejecutar el comando ng serve para levantar el localhost.
+## Development server
+
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
 
 ## Code scaffolding

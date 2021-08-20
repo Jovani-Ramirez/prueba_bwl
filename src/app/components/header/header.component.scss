@@ -1,0 +1,30 @@
+$colorMorado: #673ab7;
+
+.container {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.container-menu {
+  width: 20%;
+  display: flex;
+  flex-wrap: wrap-reverse;
+  flex-direction: row-reverse;
+}
+
+.circle {
+  width: 45px;
+  height: 45px;
+  background: #fff;
+  border-radius: 100%;
+  text-align: center;
+}
+
+.circle p {
+  color: $colorMorado;
+  font-size: 35px;
+  margin: 5px auto;
+}

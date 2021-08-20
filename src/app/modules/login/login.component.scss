@@ -1,0 +1,93 @@
+$colorAzul: #673ab7;
+
+.background-container {
+  width: 100%;
+  height: 100%;
+  background-image: url(../../../assets/backgrounds/color.jpeg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+.container {
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+}
+
+.container-form-login {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.login-form {
+  width: 40%;
+  height: 60%;
+  background: transparent;
+}
+
+.card-form {
+  width: 100%;
+  background: #fff;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.header-card {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+}
+
+.title {
+  width: 100%;
+  margin: 5px auto;
+  color: $colorAzul;
+  font-size: 30px;
+}
+
+.w-100 {
+  width: 100%;
+  margin: 10px auto;
+}
+
+.btn-expand {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: center;
+  margin: 10px auto;
+}
+
+.btn-acept {
+  width: 90%;
+}
+
+.container-new-user {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.new-user-l {
+  width: 20%;
+  text-decoration: none;
+  color: $colorAzul;
+  cursor: pointer;
+  font-size: 18px;
+}
+
+.new-user-t {
+  color: $colorAzul;
+  font-size: 16px;
+}

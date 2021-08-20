@@ -1,0 +1,29 @@
+<app-header></app-header>
+
+
+<div class="container">
+    <div class="container-table">
+
+      <div class="container-title">
+
+        <h2 class="title">Listado de usuarios del sistema</h2>
+
+        <div class="line"></div>
+      </div>
+
+      <table matSort class="table-users">
+        <tr>
+          <th mat-sort-header="name">Nombre</th>
+          <th mat-sort-header="email">Corrreo electronico</th>
+          <th mat-sort-header="date">Fecha registro</th>
+          <th mat-sort-header="time">Último login</th>
+        </tr>
+        <tr>
+          <td>{{name}}</td>
+          <td>{{email}}</td>
+          <td>{{date}}</td>
+          <td>{{time}}</td>
+        </tr>
+      </table>
+    </div>
+</div>

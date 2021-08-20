@@ -1,0 +1,30 @@
+$colorMorado: #673ab7;
+
+.container {
+    width: 100%;
+}
+
+.container-title {
+    width: 100%;
+    text-align: start;
+}
+
+.title {
+    font-size: 20px;
+    margin: 20px;
+}
+
+.line {
+    width: 98%;
+    height: 2px;
+    background: $colorMorado;
+    margin: 10px auto;
+}
+.container-table {
+    width: 100%;
+}
+
+.table-users {
+    width: 90%;
+    margin: 10px auto;
+}

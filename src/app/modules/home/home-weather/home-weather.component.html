@@ -1,0 +1,69 @@
+<app-header></app-header>
+<div class="container">
+  <div class="container-cards">
+    <mat-card class="card-info">
+      <div class="header-title">
+        <p class="title">Clima</p>
+        <div class="line"></div>
+      </div>
+      <mat-card-content class="container-data">
+        <div class="container-img">
+          <img class="icon-rain" [src]="icon" alt="">
+        </div>
+        <div class="container-txt">
+          <h3 class="txt-description">{{weather}} °C</h3>
+          <p class="txt-rain">{{condition}}</p>
+        </div>
+      </mat-card-content>
+    </mat-card>
+    <mat-card class="card-info">
+      <div class="header-title">
+        <p class="title">Pais Seleccionado</p>
+        <div class="line"></div>
+      </div>
+      <mat-card-content>
+        <h3 class="txt-description">{{country}}</h3>
+      </mat-card-content>
+    </mat-card>
+    <mat-card class="card-info">
+      <div class="header-title">
+        <p class="title">Fecha y Hora</p>
+        <div class="line"></div>
+      </div>
+      <mat-card-content>
+        <h3 class="txt-description">{{hour}}</h3>
+      </mat-card-content>
+    </mat-card>
+    <mat-card class="card-info">
+      <div class="header-title">
+        <p class="title">Zonas horarias disponibles</p>
+        <div class="line"></div>
+      </div>
+      <mat-card-content>
+        <h3 class="txt-description">{{region}}</h3>
+      </mat-card-content>
+    </mat-card>
+  </div>
+  <div class="container-countries">
+    <mat-card class="card-select-country">
+      <mat-card-header class="head-card">
+        <mat-card-title class="title">Paises disponibles</mat-card-title>
+      </mat-card-header>
+      <mat-card-content class="content-card">
+        <form [formGroup]="countryForm">
+          <mat-radio-group aria-label="Select an option" formControlName="country">
+            <mat-radio-button *ngFor="let option of countries" [value]="option.value">
+              {{option.viewValue}}
+              <div class="container-img">
+                <img class="flag" [src]="option.img" alt="Bandera de un pais">
+              </div>
+            </mat-radio-button>
+          </mat-radio-group>
+          <mat-card-actions class="actions">
+            <button class="btn-search" mat-raised-button (click)="getWeather()" color="primary">Buscar</button>
+          </mat-card-actions>
+        </form>
+      </mat-card-content>
+    </mat-card>
+  </div>
+</div>
